@@ -95,10 +95,12 @@ public class PlayerAttack : MonoBehaviour
             if(currentComboState == ComboState.KICK_1)
             {
                 playerAnim.Kick_1();
+                //FindObjectOfType<AudioManager>().Play("Kick1");
             }
             if(currentComboState == ComboState.KICK_2)
             {
                 playerAnim.Kick_2();
+                //FindObjectOfType<AudioManager>().Play("Kick2");
             }
         }
 

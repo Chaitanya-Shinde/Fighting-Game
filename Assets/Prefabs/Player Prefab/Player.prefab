@@ -307,6 +307,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  enemyTarget: {fileID: 0}
   jumpingBackSpeed: 10
   direction: {x: 0, y: 0, z: 0}
 --- !u!114 &1474256358

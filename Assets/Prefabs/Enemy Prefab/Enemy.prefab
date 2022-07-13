@@ -86,8 +86,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  speedCache: 0
   velocity: {x: 0, y: 0, z: 0}
   forwardVector: {x: 0, y: 0, z: 0}
+  playerTarget: {fileID: 0}
   attackDistance: 2
   followPlayer: 0
   attackPlayer: 0

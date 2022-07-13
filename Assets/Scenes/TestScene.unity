@@ -961,6 +961,87 @@ CharacterController:
   m_CorrespondingSourceObject: {fileID: 1463057118, guid: df66f5531dc24284cb2dd1eb0ec2e84f, type: 3}
   m_PrefabInstance: {fileID: 8232930413783443549}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &929853680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929853682}
+  - component: {fileID: 929853681}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &929853681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929853680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495e1aae49e7c64448c7dca4e67c2e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Kick1
+    clip: {fileID: 8300000, guid: 92b2153abe3c9a44580faff79c927ac5, type: 3}
+    volume: 0.291
+    volumeVariance: 0
+    pitch: 0.88
+    pitchVariance: 0.561
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Kick2
+    clip: {fileID: 8300000, guid: a368f67693491b64788e131818a41019, type: 3}
+    volume: 0.328
+    volumeVariance: 0
+    pitch: 1.02
+    pitchVariance: 0.808
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PunchShwoosh
+    clip: {fileID: 8300000, guid: c22b87259c85ff44eab64310ffc8efad, type: 3}
+    volume: 0.328
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Punch1
+    clip: {fileID: 8300000, guid: c2870741f31d0d84e867587471bf6662, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1.2
+    pitchVariance: 0.11
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!4 &929853682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929853680}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017812132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1660,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 705912124448361874, guid: 5d884ae4efdf90647833b3b476bb34d2, type: 3}
   m_PrefabInstance: {fileID: 705912125040221701}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1841358964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8232930412672720661, guid: df66f5531dc24284cb2dd1eb0ec2e84f, type: 3}
+  m_PrefabInstance: {fileID: 8232930413783443549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1841358965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841358964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b56922eb6391314b9dab17fcbf92ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftArmAttackPoint: {fileID: 0}
+  rightArmAttackPoint: {fileID: 0}
+  leftLegAttackPoint: {fileID: 0}
+  rightLegAttackPoint: {fileID: 0}
+--- !u!1 &1852216764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 705912124448361875, guid: 5d884ae4efdf90647833b3b476bb34d2, type: 3}
+  m_PrefabInstance: {fileID: 705912125040221701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1852216772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852216764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c34339880997be4a90882aa5d4108a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1944100374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,18 +2009,6 @@ PrefabInstance:
     - target: {fileID: 8232930412672720661, guid: df66f5531dc24284cb2dd1eb0ec2e84f, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8488027362186650727, guid: df66f5531dc24284cb2dd1eb0ec2e84f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8488027362186650727, guid: df66f5531dc24284cb2dd1eb0ec2e84f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8488027362186650727, guid: df66f5531dc24284cb2dd1eb0ec2e84f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df66f5531dc24284cb2dd1eb0ec2e84f, type: 3}

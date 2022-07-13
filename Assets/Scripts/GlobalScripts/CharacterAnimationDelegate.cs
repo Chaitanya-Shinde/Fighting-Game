@@ -7,10 +7,17 @@ public class CharacterAnimationDelegate : MonoBehaviour
     public GameObject leftArmAttackPoint, rightArmAttackPoint, leftLegAttackPoint, rightLegAttackPoint;
    
     private CharacterMovement characterMovement;
+    private EnemyMovement enemyMovement;
 
     void Start() 
     {
         characterMovement = GetComponent<CharacterMovement>();    
+
+        if(gameObject.CompareTag(Tags.ENEMY_TAG))
+        {
+            enemyMovement = GetComponent<EnemyMovement>();
+        }
+        
     }
     
 
@@ -108,6 +115,18 @@ public class CharacterAnimationDelegate : MonoBehaviour
     {
         characterMovement.ResetJumpBackTimer();
     }
+
+    void DisableMovement()
+    {
+        enemyMovement.enabled = false;
+    }
+
+    void EnableMovement()
+    {
+        enemyMovement.enabled = true;
+    }
+
+
     
 }
   
