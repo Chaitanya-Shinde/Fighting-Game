@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     private CharacterController con;
     private CharacterAnimation enemyAnim;
-    public float speed = 5f;
+    public float speed = 5f, speedCache;
     [SerializeField]
     private Vector3 velocity;
     private Vector3 targetDirection;
@@ -30,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
     void Awake()
     {
         cachedTransform = transform;
-        
+        speedCache = speed;
         enemyAnim = GetComponent<CharacterAnimation>();
         con = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
@@ -146,10 +146,12 @@ public class EnemyMovement : MonoBehaviour
         
         if(followPlayer)
         {
+            
             Ray moveRay = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
 
             if(Physics.Raycast(moveRay, out moveDistance, 3.8f))
             {
+                speed = 0.0f;
                 Debug.Log("b");
                 animator.SetLayerWeight(1,0f);
                 enemyAnim.Walk(false);
@@ -162,6 +164,7 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
+                speed = speedCache;
                 con.Move(transform.forward * speed * Time.deltaTime);
                 Debug.Log("a");
                 enemyAnim.Walk(true);
