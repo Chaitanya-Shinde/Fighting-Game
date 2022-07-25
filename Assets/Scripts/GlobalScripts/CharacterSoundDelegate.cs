@@ -19,4 +19,23 @@ public class CharacterSoundDelegate : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Punch1");
         FindObjectOfType<AudioManager>().Play("PunchShwoosh");
     }
+
+    void CrossPunch_Sound()
+    {
+        //make chages to crosspunch sound
+        FindObjectOfType<AudioManager>().Play("CrossPunch");
+        FindObjectOfType<AudioManager>().Play("PunchShwoosh");
+
+    }
+
+    void KnockUp_Sound()
+    {
+        FindObjectOfType<AudioManager>().Play("KnockUp");
+    }
+
+    void FallDown_Sound()
+    {
+        FindObjectOfType<AudioManager>().Play("FallDown");
+        
+    }
 }

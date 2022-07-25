@@ -65,6 +65,14 @@ public class CharacterAnimation : MonoBehaviour
         {
             anim.SetTrigger(AnimationTags.PUNCH_3_TRIGGER);
         }
+        if(attack == 3)
+        {
+            anim.SetTrigger(AnimationTags.KICK_1_TRIGGER);
+        }
+        if(attack == 4)
+        {
+            anim.SetTrigger(AnimationTags.KICK_2_TRIGGER);
+        }
     }
 
     public void Idle_Animation()
@@ -75,6 +83,7 @@ public class CharacterAnimation : MonoBehaviour
     public void KnockDown()
     {
         anim.SetTrigger(AnimationTags.KNOCK_DOWN_TRIGGER);
+        //anim.SetBool(AnimationTags.KNOCK_DOWN_BOOL, knockdown);
     }
 
     public void StandUp()
@@ -89,8 +98,10 @@ public class CharacterAnimation : MonoBehaviour
 
     public void Death()
     {
+
         anim.SetTrigger(AnimationTags.DEATH_TRIGGER);
     }
 
+    
     
 }

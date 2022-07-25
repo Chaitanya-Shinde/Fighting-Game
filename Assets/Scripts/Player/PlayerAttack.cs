@@ -15,6 +15,7 @@ public enum ComboState
 public class PlayerAttack : MonoBehaviour
 {
     private CharacterAnimation playerAnim;
+    private CharacterMovement characterMovement;
     private bool activateTimerToReset;
     private float defaultComboTimer = 0.3f;
     private float currentComboTimer;
@@ -25,6 +26,7 @@ public class PlayerAttack : MonoBehaviour
     
     void Awake() 
     {
+        characterMovement = GetComponent<CharacterMovement>();
         playerAnim = GetComponent<CharacterAnimation>();
         animator = GetComponent<Animator>();
 
@@ -56,15 +58,16 @@ public class PlayerAttack : MonoBehaviour
             currentComboState++;
             activateTimerToReset = true;
             currentComboTimer = defaultComboTimer;
-            if(currentComboState == ComboState.PUNCH_1)
+            if(currentComboState == ComboState.PUNCH_1) // punch
             {
                 playerAnim.Punch_1();
             }
-            if(currentComboState == ComboState.PUNCH_2)
+            if(currentComboState == ComboState.PUNCH_2) //hook
             {
+                
                 playerAnim.Punch_2();
             }
-            if(currentComboState == ComboState.PUNCH_3)
+            if(currentComboState == ComboState.PUNCH_3) // crosspunch
             {
                 playerAnim.Punch_3();
             }

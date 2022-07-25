@@ -20,6 +20,7 @@ public class AnimationTags
     public const string JUMP_ANIMATION = "Jumping";
     
     public const string KNOCK_DOWN_TRIGGER = "KnockDown";
+    //public const string KNOCK_DOWN_BOOL = "KnockDown1";
     public const string STAND_UP_TRIGGER = "StandUp";
     public const string HIT_TRIGGER = "Hit";
     public const string DEATH_TRIGGER = "Death";

@@ -81394,6 +81394,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
+    functionName: JumpBackAnim
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
     functionName: TagLeftArm
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -81414,8 +81421,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.8727273
+  - time: 0.8909091
     functionName: UnTagLeftArm
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1454545
+    functionName: ResetJumpBackTimer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
     private Transform cachedTransform;
     private Vector3 movementOffset;
     public float attackDistance = 2.8f;
-    private float chasePlayerAfterAttack;
+    public float chasePlayerAfterAttack;
     private float currentAttackTime;
     private float defaultAttackTime = 2f;
     [SerializeField]
@@ -97,7 +97,7 @@ public class EnemyMovement : MonoBehaviour
         else if(Vector3.Distance(transform.position, playerTarget.position) <= attackDistance)
         {
             canMove = false;
-            Debug.Log("walkstop");
+            //Debug.Log("walkstop");
             velocity = Vector3.zero; 
             enemyAnim.Walk(false);
             animator.SetLayerWeight(1,0);
@@ -116,7 +116,7 @@ public class EnemyMovement : MonoBehaviour
         if(currentAttackTime > defaultAttackTime)
         {
             animator.SetLayerWeight(1,0);
-            enemyAnim.EnemyAttack(Random.Range(0,3));
+            enemyAnim.EnemyAttack(Random.Range(0,5));
             velocity = Vector3.zero;
             currentAttackTime = 0f;
         }
@@ -166,7 +166,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 speed = speedCache;
                 con.Move(transform.forward * speed * Time.deltaTime);
-                Debug.Log("a");
+                //Debug.Log("a");
                 enemyAnim.Walk(true);
                 animator.SetLayerWeight(1,0.5f);
             }

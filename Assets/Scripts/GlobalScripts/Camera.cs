@@ -15,9 +15,12 @@ public class Camera : MonoBehaviour
 		float centerPosition = (leftTarget.position.z + rightTarget.position.z)/ 2;
 
 		transform.position = new Vector3 (
-			distanceBetweenTargets < minDistance? -distanceBetweenTargets: -minDistance ,
+			// distanceBetweenTargets < minDistance? -distanceBetweenTargets: -minDistance ,
+			// transform.position.y,
+			// centerPosition
+			centerPosition,
 			transform.position.y,
-			centerPosition
+			distanceBetweenTargets > minDistance? -distanceBetweenTargets: -minDistance
 			);
 	}
 }

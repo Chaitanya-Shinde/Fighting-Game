@@ -65,9 +65,13 @@ public class CharacterMovement : MonoBehaviour
         {
             RotatePlayer();
             AnimatePlayerWalk();
+            
         }
         
     }
+
+    
+    
 
     // Update is called once per frame
     void Update()
@@ -77,7 +81,7 @@ public class CharacterMovement : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         direction = new Vector3(0,0,horizontalInput);
         MovePlayer();
-        JumpBack();
+        //JumpBack();
 
        
 
@@ -164,7 +168,7 @@ public class CharacterMovement : MonoBehaviour
             //raycast to detect enemy and jump back to attack.
             Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
 
-            if(Physics.Raycast(ray, out hitJumpBack, 2.8f) && hopBackTimer>=0)
+            if(Physics.Raycast(ray, out hitJumpBack, 3.8f) && hopBackTimer>=0)
             {
                 
                 //Debug.Log("jumpBack");
@@ -187,8 +191,9 @@ public class CharacterMovement : MonoBehaviour
             {
                 jumpingBack = false;    
                 animator.SetLayerWeight(2,0);
+                hopBackTimer = 0.3f;
                 //Debug.Log("dont jumpBack");
-                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)* 10, Color.green);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)* 10, Color.green);
             }
     }
 

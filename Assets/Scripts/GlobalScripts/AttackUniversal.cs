@@ -57,6 +57,35 @@ public class AttackUniversal : MonoBehaviour
 
             }
 
+            if(isEnemy)
+            {
+                Vector3 hitVFX_POS = hit[0].transform.position;
+                hitVFX_POS.y += 1.13f;
+
+                if(hit[0].transform.forward.x > 0)
+                {
+                    hitVFX_POS.x += 0.3f;
+                }
+                else if(hit[0].transform.forward.x <0)
+                {
+                    hitVFX_POS.x -= 0.3f;
+                }
+
+                //Instantiate(hitVFX_Prefab, hitVFX_POS, Quaternion.identity);
+
+                if(gameObject.CompareTag(Tags.LEFT_ARM_TAG) || gameObject.CompareTag(Tags.RIGHT_LEG_TAG))
+                {
+                    Debug.Log("Knockdown player");
+                    hit[0].GetComponent<HealthScript>().ApplyDamage(damage, true);
+                    
+                }
+                else
+                {
+                    Debug.Log("knockdown false");
+                    hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
+                }
+            }
+
             gameObject.SetActive(false);
         }
     }

@@ -47,7 +47,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitVFX_Prefab: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitVFX_Prefab: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitVFX_Prefab: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitVFX_Prefab: {fileID: 0}
@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 1474256359}
   - component: {fileID: 1474256361}
   - component: {fileID: 25000730}
+  - component: {fileID: 1852216772}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -236,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 705912124448361875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 1027205729832333276}
   m_Father: {fileID: 0}
@@ -352,6 +353,7 @@ MonoBehaviour:
   rightArmAttackPoint: {fileID: 1679220254}
   leftLegAttackPoint: {fileID: 468865325}
   rightLegAttackPoint: {fileID: 159019981}
+  anim: {fileID: 1474256360}
 --- !u!114 &25000730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +368,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   isPlayer: 1
+--- !u!114 &1852216772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705912124448361875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c34339880997be4a90882aa5d4108a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &705912124296890423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1743,7 +1757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: c900b12d373fca64b98b3577eba3950a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.010579817
+      value: 0.010579811
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: c900b12d373fca64b98b3577eba3950a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1751,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: c900b12d373fca64b98b3577eba3950a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0020751953
+      value: 0.0020742416
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: c900b12d373fca64b98b3577eba3950a, type: 3}
       propertyPath: m_LocalRotation.w

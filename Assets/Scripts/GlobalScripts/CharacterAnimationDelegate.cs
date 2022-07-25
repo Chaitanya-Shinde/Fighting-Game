@@ -7,15 +7,27 @@ public class CharacterAnimationDelegate : MonoBehaviour
     public GameObject leftArmAttackPoint, rightArmAttackPoint, leftLegAttackPoint, rightLegAttackPoint;
    
     private CharacterMovement characterMovement;
+    private CharacterAnimation charAnim;
+    private PlayerAttack playerAttack;
     private EnemyMovement enemyMovement;
+    public Animator anim;
+    public Animator enemyAnim;
+    
+
+    private ShakeCamera shakeCamera;
 
     void Start() 
     {
-        characterMovement = GetComponent<CharacterMovement>();    
+        shakeCamera = GameObject.FindWithTag(Tags.MAIN_CAMERA_TAG).GetComponent<ShakeCamera>();
+        characterMovement = GetComponent<CharacterMovement>(); 
+        charAnim = GetComponent<CharacterAnimation>();
+        playerAttack = GetComponent<PlayerAttack>();
+        anim = GetComponent<Animator>();   
 
         if(gameObject.CompareTag(Tags.ENEMY_TAG))
         {
             enemyMovement = GetComponent<EnemyMovement>();
+            enemyAnim = GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<Animator>();
         }
         
     }
@@ -105,6 +117,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
         rightLegAttackPoint.tag = Tags.UNTAGGED_TAG;
     }
 
+
     void JumpBackAnim()
     {
         characterMovement.JumpBack();
@@ -116,15 +129,81 @@ public class CharacterAnimationDelegate : MonoBehaviour
         characterMovement.ResetJumpBackTimer();
     }
 
-    void DisableMovement()
+    void DisableEnemyMovement()
     {
         enemyMovement.enabled = false;
+       
+        anim.SetLayerWeight(1,0);
+        transform.gameObject.layer = 0;
+    }
+    void DisablePlayerMovement()
+    {
+        //playerAttack.enabled = false;
+        characterMovement.enabled = false;
+        anim.SetLayerWeight(1,0);
+        transform.gameObject.layer=0;
     }
 
-    void EnableMovement()
+    void EnableEnemyMovement()
     {
+        
+        //Debug.Log("enable movement");
         enemyMovement.enabled = true;
+        
+        transform.gameObject.layer = 7;
     }
+
+    void EnablePlayerMovement()
+    {
+        Debug.Log("enable player movement");
+        //playerAttack.enabled = true;
+        characterMovement.enabled = true;
+        transform.gameObject.layer = 6;
+    }
+
+    void DisablePLayerAttack()
+    {
+        playerAttack.enabled = false;
+    }
+
+    void EnablePlayerAttack()
+    {
+        playerAttack.enabled =true;
+    }
+    void StandUpAnimation()
+    {
+        anim.SetTrigger(AnimationTags.STAND_UP_TRIGGER);
+        charAnim.StandUp();
+    }
+
+    void ShakeCameraOnFall()
+    {
+        shakeCamera.ShouldShake = true;
+    }
+
+    void ResetAllPlayerAnimatorTriggers()
+    {
+        foreach (var trigger in anim.parameters)
+        {
+            if (trigger.type == AnimatorControllerParameterType.Trigger)
+            {
+                anim.ResetTrigger(trigger.name);
+            }
+        }
+        
+    }
+
+    void ResetAllEnemyAnimatorTriggers()
+    {
+        foreach (var trigger in enemyAnim.parameters)
+        {
+            if (trigger.type == AnimatorControllerParameterType.Trigger)
+            {
+                enemyAnim.ResetTrigger(trigger.name);
+            }
+        }
+    }
+
 
 
     
