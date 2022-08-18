@@ -297,7 +297,7 @@ MonoBehaviour:
   forwardVector: {x: 0, y: 0, z: 0}
   playerTarget: {fileID: 0}
   attackDistance: 3.8
-  chasePlayerAfterAttack: 0
+  chasePlayerAfterAttack: 1
   followPlayer: 0
   attackPlayer: 0
   canMove: 0
@@ -326,8 +326,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7610d0bcfb9fa2b44b45fd151663716a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  maxHealth: 100
+  currenthealth: 0
   isPlayer: 0
+  healthBar: {fileID: 0}
 --- !u!114 &1841358965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +347,7 @@ MonoBehaviour:
   leftLegAttackPoint: {fileID: 2046355543}
   rightLegAttackPoint: {fileID: 220738072}
   anim: {fileID: 1463057115}
+  enemyAnim: {fileID: 1463057115}
 --- !u!114 &1841358970
 MonoBehaviour:
   m_ObjectHideFlags: 0

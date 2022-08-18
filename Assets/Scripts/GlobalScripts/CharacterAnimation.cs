@@ -40,6 +40,10 @@ public class CharacterAnimation : MonoBehaviour
     {
         anim.SetTrigger(AnimationTags.LEG_SWEEP_TRIGGER);
     }
+    public void SweepFall()
+    {
+        anim.SetTrigger(AnimationTags.SWEEP_FALL);
+    }
     public void Jump()
     {
         anim.SetTrigger(AnimationTags.JUMP_ANIMATION);

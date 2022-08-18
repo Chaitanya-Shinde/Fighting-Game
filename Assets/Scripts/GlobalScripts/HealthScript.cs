@@ -1,28 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HealthScript : MonoBehaviour
 {
-    public float health = 100f;
+    public float maxHealth = 100f;
+    public float health;
     private CharacterAnimation anim;
     private Animator animator;
     private EnemyMovement enemyMovement;
     private bool charaterDied;
     public bool isPlayer;
+    private HealthUI healthUI;
+
 
     void Awake() 
     {
         anim = GetComponent<CharacterAnimation>();
         animator = GetComponent<Animator>();
+        if(isPlayer){
+            healthUI = GetComponent<HealthUI>();
+        }
+        
+        // healthBar.GetComponent<Slider>();
+        // healthBar = GetComponent<Healthbar>();
+        
+    }
+
+    void Start() 
+    {
+        health = maxHealth;
+        
+        
     }
     
     public void ApplyDamage(float damage, bool knockDown)
     {
+        
+
         if(charaterDied)
             return;
         
         health -= damage;
+
+        //display health        
+        if(isPlayer )
+        {
+            healthUI.DisplayHealth(maxHealth, health);
+        }
+        
+        
 
         if(health <= 0)
         {
@@ -38,6 +66,7 @@ public class HealthScript : MonoBehaviour
 
         if(!isPlayer)
         {   
+            
             if(knockDown)
             {
                 Debug.Log("Knockdown true");
@@ -58,7 +87,7 @@ public class HealthScript : MonoBehaviour
             }
         }
         if(isPlayer)
-        {   
+        {  
             if(knockDown)
             {
                 Debug.Log("Knockdown true");
@@ -79,4 +108,6 @@ public class HealthScript : MonoBehaviour
             }
         }
     }
+
+    
 }

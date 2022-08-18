@@ -44,6 +44,15 @@ public class PlayerAttack : MonoBehaviour
     {
         ComboAttacks();
         ResetComboState();
+        OtherAttacks();
+    }
+
+    void OtherAttacks()
+    {
+        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Q))
+        {
+            playerAnim.Leg_Sweep();
+        }
     }
 
     void ComboAttacks()

@@ -12,6 +12,7 @@ public class AnimationTags
     public const string KICK_1_TRIGGER = "Kick1";
     public const string KICK_2_TRIGGER = "Kick2";
     public const string LEG_SWEEP_TRIGGER = "LegSweep";
+    public const string SWEEP_FALL = "SweepFall";
 
     public const string SPELL_1_TRIGGER = "Spell1";
 

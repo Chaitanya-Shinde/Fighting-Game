@@ -45688,6 +45688,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.018181818
+    functionName: DisablePlayerMovement
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.21818182
     functionName: rightArmAttackPoint_ON
     data: 
@@ -45704,6 +45711,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.56363636
     functionName: rightArmAttackPoint_OFF
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6181818
+    functionName: EnablePlayerMovement
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
