@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-    private Image health_UI;
+    public Image health_UI;
     
 
     void Awake() 
@@ -15,12 +15,13 @@ public class HealthUI : MonoBehaviour
         health_UI = GameObject.FindWithTag(Tags.HEALTH_UI).GetComponent<Image>();
     }
 
-    public void DisplayHealth(float maxHealth, float value)
+    public void DisplayHealth(float value)
     {
         value/=100f;
         if(value <0f)
+        {
             value = 0f;
-
-        health_UI.fillAmount = value/maxHealth;
+        }
+        health_UI.fillAmount = value;
     }
 }

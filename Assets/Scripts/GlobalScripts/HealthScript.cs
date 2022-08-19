@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
@@ -12,16 +12,18 @@ public class HealthScript : MonoBehaviour
     private EnemyMovement enemyMovement;
     private bool charaterDied;
     public bool isPlayer;
-    private HealthUI healthUI;
+    //private HealthUI healthUI;
+    public Image health_UI, playerHealthUI, enemyHealthUI;
 
 
     void Awake() 
     {
         anim = GetComponent<CharacterAnimation>();
         animator = GetComponent<Animator>();
-        if(isPlayer){
-            healthUI = GetComponent<HealthUI>();
-        }
+        health_UI = GameObject.FindWithTag(Tags.HEALTH_UI).GetComponent<Image>();
+        playerHealthUI = GameObject.Find("PlayerHealthUI").GetComponent<Image>();
+        enemyHealthUI = GameObject.Find("EnemyHealthUI").GetComponent<Image>();
+        //healthUI = GetComponent<HealthUI>();
         
         // healthBar.GetComponent<Slider>();
         // healthBar = GetComponent<Healthbar>();
@@ -45,9 +47,13 @@ public class HealthScript : MonoBehaviour
         health -= damage;
 
         //display health        
-        if(isPlayer )
+        if(isPlayer)
         {
-            healthUI.DisplayHealth(maxHealth, health);
+           DisplayHealth(health);
+        }
+        if(!isPlayer)
+        {
+            DisplayHealth(health);
         }
         
         
@@ -107,6 +113,24 @@ public class HealthScript : MonoBehaviour
                 
             }
         }
+    }
+
+    public void DisplayHealth(float value)
+    {
+        value/=100f;
+        if(value <0f)
+        {
+            value = 0f;
+        }
+        if(isPlayer)
+        {
+            playerHealthUI.fillAmount = value;
+        }
+        else if(!isPlayer)
+        {
+            enemyHealthUI.fillAmount = value;
+        }
+        
     }
 
     
