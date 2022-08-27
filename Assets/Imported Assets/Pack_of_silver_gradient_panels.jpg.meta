@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: df3253f596536c249b0168cbfafcb6f9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1602
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e86c5c31dd5ec468d189ab519fafa5
+      internalID: -2031343066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_1
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1602
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025c003f324b46345ae9d0d7c7b170d6
+      internalID: -1296613402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_2
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1602
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec017190ba2ffd409c10571a53efc23
+      internalID: -1192016089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_3
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 1602
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c45a82a23091af46abd96d3a92333af
+      internalID: 931483238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1204
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95b75f45f5806e4ebd92785b4e618eb
+      internalID: -1751735052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_5
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1204
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a854de00efebd5546916d1d2fb904c47
+      internalID: -882215891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_6
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1204
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b32910d5d1d274f96d5a1bf4c1c0e9
+      internalID: -908795138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_7
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 1204
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d904e1e0c2c82489abbc70d5edbdec
+      internalID: 1619874911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 806
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468e32ef45ca18a46a77ec4a41822626
+      internalID: -683480646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_9
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 806
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f698635e8329bb4aaf00a665b008194
+      internalID: -225948119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_10
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 806
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee48ea63f919b047bc22d06fa8ab5d1
+      internalID: 280987630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_11
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 806
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885a3014b0cfb5e44bfef580f9b51861
+      internalID: -221582840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_12
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 408
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9ca7a692b88be49ba12f4c839aca36
+      internalID: 400394624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_13
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 408
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3165960502bdf479fe7712c56aabef
+      internalID: 769098688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_14
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 408
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b018696008e688c4b983b8db3e330614
+      internalID: 1711016603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_15
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 408
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1915956a5ec49444092738fdcb37ce34
+      internalID: 632352532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 10
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e68d9ee0df865c498ee4f42a124b282
+      internalID: -780033867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_17
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 10
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce837c90a7234ea47acd5669aa5321ea
+      internalID: 894387583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_18
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 10
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5bb0ed54dd3464dae647cb4bd09b68
+      internalID: -305616070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pack_of_silver_gradient_panels_19
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 10
+        width: 848
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c119743cb1def8458fdf00cc92b92fa
+      internalID: 1784903724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bfbb15de7286b0c4db65a6edda463e93
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pack_of_silver_gradient_panels_1: -1296613402
+      Pack_of_silver_gradient_panels_15: 632352532
+      Pack_of_silver_gradient_panels_19: 1784903724
+      Pack_of_silver_gradient_panels_5: -882215891
+      Pack_of_silver_gradient_panels_10: 280987630
+      Pack_of_silver_gradient_panels_4: -1751735052
+      Pack_of_silver_gradient_panels_6: -908795138
+      Pack_of_silver_gradient_panels_3: 931483238
+      Pack_of_silver_gradient_panels_17: 894387583
+      Pack_of_silver_gradient_panels_8: -683480646
+      Pack_of_silver_gradient_panels_16: -780033867
+      Pack_of_silver_gradient_panels_0: -2031343066
+      Pack_of_silver_gradient_panels_7: 1619874911
+      Pack_of_silver_gradient_panels_13: 769098688
+      Pack_of_silver_gradient_panels_18: -305616070
+      Pack_of_silver_gradient_panels_2: -1192016089
+      Pack_of_silver_gradient_panels_9: -225948119
+      Pack_of_silver_gradient_panels_12: 400394624
+      Pack_of_silver_gradient_panels_11: -221582840
+      Pack_of_silver_gradient_panels_14: 1711016603
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

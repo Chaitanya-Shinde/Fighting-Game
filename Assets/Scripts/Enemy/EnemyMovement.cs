@@ -149,7 +149,7 @@ public class EnemyMovement : MonoBehaviour
             
             Ray moveRay = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
 
-            if(Physics.Raycast(moveRay, out moveDistance, 3.8f))
+            if(Physics.Raycast(moveRay, out moveDistance, 3.5f))
             {
                 speed = 0.0f;
                 Debug.Log("b");

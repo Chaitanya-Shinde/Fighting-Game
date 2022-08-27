@@ -67,6 +67,11 @@ public class HealthScript : MonoBehaviour
             {
                 GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false;
             }
+            if(!isPlayer)
+            {
+                Debug.Log("ENEMY DEAD");
+            }
+            
             return;
         }
 

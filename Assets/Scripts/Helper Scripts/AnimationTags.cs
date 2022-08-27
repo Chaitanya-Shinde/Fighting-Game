@@ -28,6 +28,8 @@ public class AnimationTags
 
     public const string JUMP_BACK_TRIGGER = "JumpBack";
 
+    
+
 }
 
 public class Axis

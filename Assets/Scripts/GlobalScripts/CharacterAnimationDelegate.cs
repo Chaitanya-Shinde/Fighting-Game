@@ -12,8 +12,6 @@ public class CharacterAnimationDelegate : MonoBehaviour
     private EnemyMovement enemyMovement;
     public Animator anim;
     public Animator enemyAnim;
-    
-
     private ShakeCamera shakeCamera;
 
     void Start() 
