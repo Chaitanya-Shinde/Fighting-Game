@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5693043964852422713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5693043964852422715}
+  - component: {fileID: 5693043964852422712}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5693043964852422715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693043964852422713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5693043964852422712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693043964852422713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495e1aae49e7c64448c7dca4e67c2e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Kick1
+    clip: {fileID: 8300000, guid: 92b2153abe3c9a44580faff79c927ac5, type: 3}
+    volume: 0.291
+    volumeVariance: 0
+    pitch: 0.88
+    pitchVariance: 0.561
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Kick2
+    clip: {fileID: 8300000, guid: a368f67693491b64788e131818a41019, type: 3}
+    volume: 0.328
+    volumeVariance: 0
+    pitch: 1.02
+    pitchVariance: 0.808
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PunchShwoosh
+    clip: {fileID: 8300000, guid: c22b87259c85ff44eab64310ffc8efad, type: 3}
+    volume: 0.328
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Punch1
+    clip: {fileID: 8300000, guid: c2870741f31d0d84e867587471bf6662, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1.2
+    pitchVariance: 0.11
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KnockUp
+    clip: {fileID: 8300000, guid: d22f444f4b604ed46add298abe88a4b3, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1.2
+    pitchVariance: 0.11
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: FallDown
+    clip: {fileID: 8300000, guid: e47c231459a82c24294e44346cd76081, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1.2
+    pitchVariance: 0.11
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: CrossPunch
+    clip: {fileID: 8300000, guid: 799d0d312fd66864c9c6d01f7b0e44a7, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1.2
+    pitchVariance: 0.11
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: d6973af1843e07b4c80c5838cef6b129, type: 3}
+    volume: 0.062
+    volumeVariance: 0
+    pitch: 1.2
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: CountDown
+    clip: {fileID: 8300000, guid: aa4e77f022283554fa896d45e78afce5, type: 3}
+    volume: 0.077
+    volumeVariance: 0
+    pitch: 1.21
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: YouWin
+    clip: {fileID: 8300000, guid: 56dfbcb44e7365b4f963326b90dfce0e, type: 3}
+    volume: 0.26
+    volumeVariance: 0
+    pitch: 0.84
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: YouLose
+    clip: {fileID: 8300000, guid: 1abe6cd1b18ab8941848c5a18789f7b9, type: 3}
+    volume: 0.291
+    volumeVariance: 0
+    pitch: 0.73
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

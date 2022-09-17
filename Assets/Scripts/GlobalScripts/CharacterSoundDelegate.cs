@@ -38,4 +38,19 @@ public class CharacterSoundDelegate : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("FallDown");
         
     }
+
+    void CountDown()
+    {
+        FindObjectOfType<AudioManager>().Play("CountDown");
+    }
+
+    void YouWin()
+    {
+        FindObjectOfType<AudioManager>().Play("YouWin");
+    }
+
+    void YouLose()
+    {
+        FindObjectOfType<AudioManager>().Play("YouLose");
+    }
 }

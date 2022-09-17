@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1978506571344211534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1978506571344211529}
+  - component: {fileID: 1978506571344211528}
+  - component: {fileID: 1978506571344211531}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1978506571344211529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978506571344211534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.139479, y: 2.363055, z: -3.1255329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1978506571344211528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978506571344211534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60be5ed2d04716f449efea28e748915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _restartmatch: {fileID: 11400000, guid: e2c060ad874810045b4b71ea57363457, type: 2}
+  roundsCount: 3
+  round: 0
+  playerWinCount: 0
+  enemyWinCount: 0
+  onlyOnce: 1
+  restartOnce: 0
+  currentTime: 0
+  startTime: 3
+  transTime: 3
+  CountDownText: {fileID: 0}
+  PlayerWinText: {fileID: 0}
+  EnemyWinText: {fileID: 0}
+  P1: {fileID: 0}
+  P2: {fileID: 0}
+  E1: {fileID: 0}
+  E2: {fileID: 0}
+  healthScriptPlayer: {fileID: 0}
+  healthScriptEnemy: {fileID: 0}
+  textobj: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  uiAnim: {fileID: 0}
+  GD: {fileID: 0}
+  winAnim: {fileID: 0}
+  pauseAnim: {fileID: 0}
+  restartAnim: {fileID: 0}
+  transAnim: {fileID: 0}
+  CD: {fileID: 0}
+--- !u!114 &1978506571344211531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978506571344211534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e9828d44bc3e1428d812f776ef7012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterMovement: {fileID: 0}
+  charAnim: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyMovement: {fileID: 0}
+  anim: {fileID: 0}
+  enemyAnim: {fileID: 0}

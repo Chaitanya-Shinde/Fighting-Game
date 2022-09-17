@@ -6,13 +6,13 @@ public class CharacterAnimationDelegate : MonoBehaviour
 {
     public GameObject leftArmAttackPoint, rightArmAttackPoint, leftLegAttackPoint, rightLegAttackPoint;
    
-    private CharacterMovement characterMovement;
-    private CharacterAnimation charAnim;
-    private PlayerAttack playerAttack;
-    private EnemyMovement enemyMovement;
+    public CharacterMovement characterMovement;
+    public CharacterAnimation charAnim;
+    public PlayerAttack playerAttack;
+    public EnemyMovement enemyMovement;
     public Animator anim;
     public Animator enemyAnim;
-    private ShakeCamera shakeCamera;
+    public ShakeCamera shakeCamera;
 
     void Start() 
     {
@@ -27,6 +27,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
             enemyMovement = GetComponent<EnemyMovement>();
             enemyAnim = GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<Animator>();
         }
+        
         
     }
     
@@ -127,14 +128,14 @@ public class CharacterAnimationDelegate : MonoBehaviour
         characterMovement.ResetJumpBackTimer();
     }
 
-    void DisableEnemyMovement()
+    public void DisableEnemyMovement()
     {
         enemyMovement.enabled = false;
        
         anim.SetLayerWeight(1,0);
         transform.gameObject.layer = 0;
     }
-    void DisablePlayerMovement()
+    public void DisablePlayerMovement()
     {
         //playerAttack.enabled = false;
         characterMovement.enabled = false;
@@ -142,7 +143,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
         transform.gameObject.layer=0;
     }
 
-    void EnableEnemyMovement()
+    public void EnableEnemyMovement()
     {
         
         //Debug.Log("enable movement");
@@ -151,7 +152,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
         transform.gameObject.layer = 7;
     }
 
-    void EnablePlayerMovement()
+    public void EnablePlayerMovement()
     {
         Debug.Log("enable player movement");
         //playerAttack.enabled = true;
@@ -159,12 +160,12 @@ public class CharacterAnimationDelegate : MonoBehaviour
         transform.gameObject.layer = 6;
     }
 
-    void DisablePLayerAttack()
+    public void DisablePLayerAttack()
     {
         playerAttack.enabled = false;
     }
 
-    void EnablePlayerAttack()
+    public void EnablePlayerAttack()
     {
         playerAttack.enabled =true;
     }

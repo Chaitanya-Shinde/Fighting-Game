@@ -7,11 +7,16 @@ public class UIAnimationDelegate : MonoBehaviour
     public GameObject img3,img2,img1;
     public Animator anim;
 
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+      
+        anim = GameObject.Find("countdown").GetComponent<Animator>();
+
+        
+        
     }
 
     // Update is called once per frame

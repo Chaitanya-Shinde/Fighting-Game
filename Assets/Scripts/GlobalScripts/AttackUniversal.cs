@@ -50,17 +50,19 @@ public class AttackUniversal : MonoBehaviour
                     Instantiate(hitVFX_Prefab, GameObject.FindWithTag(Tags.RIGHT_LEG_TAG).GetComponent<Transform>().position, Quaternion.identity);
                 }
 
+                if(gameObject.CompareTag(Tags.LEFT_ARM_TAG))
+                {
+                    Instantiate(hitVFX_Prefab, GameObject.FindWithTag(Tags.LEFT_ARM_TAG).GetComponent<Transform>().position, Quaternion.identity);
+                }
+                else if(gameObject.CompareTag(Tags.RIGHT_LEG_TAG))
+                {
+                    Instantiate(hitVFX_Prefab, GameObject.FindWithTag(Tags.RIGHT_LEG_TAG).GetComponent<Transform>().position, Quaternion.identity);
+                }
+                
                 if(gameObject.CompareTag(Tags.LEFT_ARM_TAG) || gameObject.CompareTag(Tags.RIGHT_LEG_TAG))
                 {
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage, true);
-                    if(gameObject.CompareTag(Tags.LEFT_ARM_TAG))
-                    {
-                        Instantiate(hitVFX_Prefab, GameObject.FindWithTag(Tags.LEFT_ARM_TAG).GetComponent<Transform>().position, Quaternion.identity);
-                    }
-                    else if(gameObject.CompareTag(Tags.RIGHT_LEG_TAG))
-                    {
-                        Instantiate(hitVFX_Prefab, GameObject.FindWithTag(Tags.RIGHT_LEG_TAG).GetComponent<Transform>().position, Quaternion.identity);
-                    }
+                    
                     
                     
                 }

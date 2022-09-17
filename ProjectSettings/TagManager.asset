@@ -12,6 +12,7 @@ TagManager:
   - RightLeg
   - HealthUI
   - CountDownTextUI
+  - 3
   layers:
   - Default
   - TransparentFX
