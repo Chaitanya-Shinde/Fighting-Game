@@ -13,6 +13,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
     public Animator anim;
     public Animator enemyAnim;
     public ShakeCamera shakeCamera;
+    public PauseMenu pauseMenu;
 
     void Start() 
     {
@@ -21,6 +22,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
         charAnim = GetComponent<CharacterAnimation>();
         playerAttack = GetComponent<PlayerAttack>();
         anim = GetComponent<Animator>();   
+        pauseMenu = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
 
         if(gameObject.CompareTag(Tags.ENEMY_TAG))
         {
@@ -201,6 +203,15 @@ public class CharacterAnimationDelegate : MonoBehaviour
                 enemyAnim.ResetTrigger(trigger.name);
             }
         }
+    }
+
+    void DisablePauseMenu()
+    {
+        pauseMenu.enabled =false;
+    }
+    void EnablePauseMenu()
+    {
+        pauseMenu.enabled = true;
     }
 
 

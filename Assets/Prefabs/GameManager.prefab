@@ -49,9 +49,9 @@ MonoBehaviour:
   roundsCount: 3
   round: 0
   playerWinCount: 0
-  enemyWinCount: 0
+  enemyWinCount: 1
   onlyOnce: 1
-  restartOnce: 0
+  restartOnce: 1
   currentTime: 0
   startTime: 3
   transTime: 3
@@ -66,6 +66,7 @@ MonoBehaviour:
   healthScriptEnemy: {fileID: 0}
   textobj: {fileID: 0}
   pauseMenu: {fileID: 0}
+  pauseScript: {fileID: 0}
   uiAnim: {fileID: 0}
   GD: {fileID: 0}
   winAnim: {fileID: 0}

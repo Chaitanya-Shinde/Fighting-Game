@@ -5,14 +5,9 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] 
-    private float moveSpeed = 5f;
-    [SerializeField]
-    private float gravity = 9.81f;
-    [SerializeField]
-    private float jumpSpeed = 3f;
+    private float moveSpeed = 5f, gravity = 9.81f, jumpSpeed = 3f;
     [SerializeField]
     private float doubleJumpMultiplier = 0.5f;
-
     private CharacterController con;
 
     [SerializeField]

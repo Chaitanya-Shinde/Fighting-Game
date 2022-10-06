@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     
     public Animator pauseAnim;
     public RoundManager RM;
-    public bool once = true;
+    public bool once = true, pauseOnce = true;
     // Start is called before the first frame update
 
     void Awake() 
@@ -42,9 +42,49 @@ public class PauseMenu : MonoBehaviour
             //Resume();
             //once = false;
         }
-
-        
         pauseAnim = GameObject.Find("PauseMenu").GetComponent<Animator>();
+        StartCoroutine(Pause());
+
+        Debug.Log(Time.timeScale);
+
+
+
+    }
+
+    IEnumerator Pause()
+    {
+       
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            if(pauseOnce)
+            {
+                //pauseMenu.SetActive(true);
+                // pauseAnim.Play("pauseMenuDOWN");
+                pauseAnim.SetBool("OnPause", true);
+                pauseOnce = false;
+                yield return new WaitForSeconds(0.5f);
+                Time.timeScale = 0f;
+ 
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+            
+  
+            if(Input.GetKeyDown(KeyCode.P))
+            {
+                Time.timeScale = 1f;
+                pauseAnim.SetBool("OnPause", false);
+                pauseOnce = true;
+                
+            }
+            
+            
+        }
+            
+        
+        
     }
 
     public void Resume() //onClick
@@ -52,6 +92,7 @@ public class PauseMenu : MonoBehaviour
         //pauseMenu.SetActive(false);
         //pauseAnim.Play("pauseMenuUP");
         pauseAnim.SetBool("OnPause", false);
+        pauseOnce = true;
         Time.timeScale = 1f;
     }
 

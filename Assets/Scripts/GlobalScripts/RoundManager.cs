@@ -13,7 +13,7 @@ public class RoundManager : MonoBehaviour
     public int roundsCount = 3, round = 0, playerWinCount = 0,enemyWinCount = 0;
     public bool onlyOnce = true, restartOnce;
     private float ReloadTime =2.0f;
-    public float currentTime = 0f,startTime = 3f, transTime = 3f;
+    public float currentTime = 0f,startTime = 3f, transTime = 1f;
     [SerializeField] private TMP_Text CountDownText;
     [SerializeField] private TMP_Text PlayerWinText, EnemyWinText;
     public Image P1, P2, E1, E2;
@@ -22,6 +22,8 @@ public class RoundManager : MonoBehaviour
     public HealthScript healthScriptPlayer, healthScriptEnemy;
     public GameObject textobj;
     [SerializeField] GameObject pauseMenu;
+
+    public PauseMenu pauseScript;
     public UIAnimationDelegate uiAnim;
     public GameDelegate GD;
     public Animator winAnim, pauseAnim,restartAnim, transAnim;
@@ -46,7 +48,7 @@ public class RoundManager : MonoBehaviour
         playerWinCount = 0;
         enemyWinCount = 0;
         onlyOnce = true;
-        restartOnce = false;
+        restartOnce = true;
         //_restartmatch.restart = false;
         temp.a = 0.0f;
         fill.a = 1.0f;
@@ -57,7 +59,7 @@ public class RoundManager : MonoBehaviour
 
         //PlayerWinText.color = zeroAlpha;
         currentTime = startTime;    
-        
+        pauseScript.enabled = true;
         pauseAnim.SetBool("OnPause", false);
         restartAnim.SetBool("OnRestart", false);
         //restartOnce = false;
@@ -87,6 +89,7 @@ public class RoundManager : MonoBehaviour
         PlayerWinText = GameObject.Find("PlayerWin").GetComponent<TMP_Text>();
         EnemyWinText = GameObject.Find("EnemyWin").GetComponent<TMP_Text>();
         pauseMenu = GameObject.Find("PauseMenu");
+        pauseScript = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
         pauseAnim = GameObject.Find("PauseMenu").GetComponent<Animator>();
         restartAnim = GameObject.Find("RestartMenu").GetComponent<Animator>();
         transAnim = GameObject.Find("FadeTrans").GetComponent<Animator>();
@@ -100,7 +103,7 @@ public class RoundManager : MonoBehaviour
         StartCoroutine(CheckRoundCount());
         Countdown();
         WinIndicators();
-        StartCoroutine(Pause());
+        // StartCoroutine(Pause());
         CheckBuildInstance();
         //Debug.Log(healthScriptEnemy.health);
         //Debug.Log(healthScriptPlayer.health);
@@ -167,6 +170,7 @@ public class RoundManager : MonoBehaviour
                     LoadMainMenu();
                     restartOnce = false;
                 }
+                
                 
                 
                 
@@ -376,18 +380,7 @@ public class RoundManager : MonoBehaviour
         }
     }
 
-    IEnumerator Pause()
-    {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            //pauseMenu.SetActive(true);
-            // pauseAnim.Play("pauseMenuDOWN");
-            pauseAnim.SetBool("OnPause", true);
-            yield return new WaitForSeconds(0.5f);
-            Time.timeScale = 0f;
-            
-        }
-    }
+
 
     void CheckBuildInstance()
     {
@@ -398,20 +391,17 @@ public class RoundManager : MonoBehaviour
         }    
     }
 
-    void LoadMainMenu()
+    void LoadMainMenu() //loads credits scene
     {
         StartCoroutine(LoadMain());
     }
 
-    IEnumerator LoadMain()
+    IEnumerator LoadMain() //loads credits scene
     {
-       
-            transAnim.SetTrigger("OnFade");
-            yield return new WaitForSeconds(transTime);
-            SceneManager.LoadScene(0);
-       
-        
-        
+        Debug.Log("change scene");
+        transAnim.SetTrigger("OnFade");
+        yield return new WaitForSeconds(transTime);
+        SceneManager.LoadScene(2);
 
     }
 
