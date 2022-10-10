@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterAnimationDelegate : MonoBehaviour
 {
     public GameObject leftArmAttackPoint, rightArmAttackPoint, leftLegAttackPoint, rightLegAttackPoint;
-   
     public CharacterMovement characterMovement;
     public CharacterAnimation charAnim;
     public PlayerAttack playerAttack;

@@ -131,7 +131,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 56dfbcb44e7365b4f963326b90dfce0e, type: 3}
     volume: 0.26
     volumeVariance: 0
-    pitch: 0.84
+    pitch: 1.13
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 1abe6cd1b18ab8941848c5a18789f7b9, type: 3}
     volume: 0.291
     volumeVariance: 0
-    pitch: 0.73
+    pitch: 0.86
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 0}

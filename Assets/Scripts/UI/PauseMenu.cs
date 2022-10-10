@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     
     public Animator pauseAnim;
     public RoundManager RM;
-    public bool once = true, pauseOnce = true;
+    public bool once = true, pauseOnce = true, isPaused = false;
     // Start is called before the first frame update
 
     void Awake() 
@@ -43,7 +43,14 @@ public class PauseMenu : MonoBehaviour
             //once = false;
         }
         pauseAnim = GameObject.Find("PauseMenu").GetComponent<Animator>();
-        StartCoroutine(Pause());
+        if(Input.GetKeyDown(KeyCode.P) && !isPaused)
+        {
+            StartCoroutine(Pause());
+            isPaused = true;
+
+               
+        }
+        
 
         Debug.Log(Time.timeScale);
 
@@ -53,38 +60,23 @@ public class PauseMenu : MonoBehaviour
 
     IEnumerator Pause()
     {
-       
-        if(Input.GetKeyDown(KeyCode.P))
+        //pauseMenu.SetActive(true);
+        // pauseAnim.Play("pauseMenuDOWN");
+        pauseAnim.SetBool("OnPause", true);
+        isPaused = true;
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0f;
+        
+
+        if(Input.GetKeyDown(KeyCode.P) && isPaused)
         {
-            if(pauseOnce)
-            {
-                //pauseMenu.SetActive(true);
-                // pauseAnim.Play("pauseMenuDOWN");
-                pauseAnim.SetBool("OnPause", true);
-                pauseOnce = false;
-                yield return new WaitForSeconds(0.5f);
-                Time.timeScale = 0f;
- 
-            }
-            else
-            {
-                Time.timeScale = 1f;
-            }
+            Time.timeScale = 1f;
+            pauseAnim.SetBool("OnPause", false);
+            isPaused = false;
             
+        } 
+        
   
-            if(Input.GetKeyDown(KeyCode.P))
-            {
-                Time.timeScale = 1f;
-                pauseAnim.SetBool("OnPause", false);
-                pauseOnce = true;
-                
-            }
-            
-            
-        }
-            
-        
-        
     }
 
     public void Resume() //onClick
@@ -93,6 +85,7 @@ public class PauseMenu : MonoBehaviour
         //pauseAnim.Play("pauseMenuUP");
         pauseAnim.SetBool("OnPause", false);
         pauseOnce = true;
+        isPaused = false;
         Time.timeScale = 1f;
     }
 
